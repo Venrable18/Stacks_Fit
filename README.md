@@ -76,6 +76,18 @@
 
 ---
 
+### 📜 **Smart Contract Information**
+
+#### **StacksFit V2 Contract (Active)**
+```javascript
+Contract Address: STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E
+Contract Name: stacksfit-v2
+Full Contract ID: STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E.stacksfit-v2
+Network: Testnet
+Version: 2.0.0
+Status: ✅ DEPLOYED & ACTIVE
+```
+
 ## 🏗️ **System Architecture**
 
 ### 📊 **High-Level Architecture Diagram**
@@ -173,93 +185,6 @@ flowchart TD
     style I fill:#FBD38D,color:#000
 ```
 
-### 📁 **Project Structure Overview**
-
-```mermaid
-graph TD
-    subgraph "🏗️ StacksFit Project Root"
-        ROOT[📂 Stacks_Fitness/]
-    end
-    
-    subgraph "🎨 Frontend Application"
-        FE[📂 Frontend/]
-        FE_SRC[📂 src/]
-        FE_COMP[📂 components/]
-        FE_SERV[📂 services/]
-        FE_HOOKS[📂 hooks/]
-        FE_STORE[📂 store/]
-        FE_CONFIG[📂 config/]
-        
-        FE_COMP --> COMP1[🤖 AICoach.tsx]
-        FE_COMP --> COMP2[📊 Dashboard.tsx]
-        FE_COMP --> COMP3[🎯 AnalyticsDashboard.tsx]
-        FE_COMP --> COMP4[💰 WalletConnection.tsx]
-        FE_COMP --> COMP5[🏆 NFTCollection.tsx]
-        
-        FE_SERV --> SERV1[⛓️ stacksFitV2Service.ts]
-        FE_SERV --> SERV2[🤖 aiService.ts]
-        FE_SERV --> SERV3[🔒 secureContractCaller.ts]
-    end
-    
-    subgraph "⛓️ Blockchain Backend"
-        BE[📂 stacks_Backend/]
-        BE_CONT[📂 contracts/]
-        BE_DEPLOY[📂 deployments/]
-        BE_SET[📂 settings/]
-        
-        BE_CONT --> CONT1[📜 stacksfit-v2.clar]
-        BE_DEPLOY --> DEP1[🌐 testnet-plan.yaml]
-        BE_DEPLOY --> DEP2[🖥️ devnet-plan.yaml]
-    end
-    
-    subgraph "🤖 AI Middleware"
-        AI[📂 ai_middleware/]
-        AI_SRC[📂 src/]
-        AI_ROUTES[📂 routes/]
-        AI_SERV[📂 services/]
-        
-        AI_ROUTES --> ROUTE1[🧠 ai.js]
-        AI_ROUTES --> ROUTE2[⛓️ blockchain.js]
-        AI_SERV --> AIServ1[🔮 geminiService.js]
-        AI_SERV --> AIServ2[🎯 smartAIService.js]
-    end
-    
-    subgraph "🔗 Blockchain Indexing"
-        CHAIN[📂 chainhook-indexer/]
-        CHAIN --> YAML1[⚙️ stacksfit-indexer.yaml]
-        CHAIN --> YAML2[🎣 stacksfit-predicate.yaml]
-    end
-    
-    ROOT --> FE
-    ROOT --> BE
-    ROOT --> AI
-    ROOT --> CHAIN
-    
-    FE --> FE_SRC
-    FE_SRC --> FE_COMP
-    FE_SRC --> FE_SERV
-    FE_SRC --> FE_HOOKS
-    FE_SRC --> FE_STORE
-    FE_SRC --> FE_CONFIG
-    
-    BE --> BE_CONT
-    BE --> BE_DEPLOY
-    BE --> BE_SET
-    
-    AI --> AI_SRC
-    AI_SRC --> AI_ROUTES
-    AI_SRC --> AI_SERV
-    
-    style ROOT fill:#7A52E8,color:#fff
-    style FE fill:#61DAFB,color:#000
-    style BE fill:#F093FB,color:#000
-    style AI fill:#68D391,color:#000
-    style CHAIN fill:#F6AD55,color:#000
-    style CONT1 fill:#FF6B35,color:#fff
-    style COMP1 fill:#9F7AEA,color:#fff
-    style SERV1 fill:#4FD1C7,color:#000
-```
-
 ---
 
 ## 💻 **Technology Stack**
@@ -314,19 +239,7 @@ graph TD
 - **API Endpoint**: `https://api.testnet.hiro.so`
 - **Explorer**: `https://explorer.hiro.so`
 
-### 📜 **Smart Contract Information**
 
-#### **StacksFit V2 Contract (Active)**
-
-| Field | Value |
-|-------|-------|
-| **Contract Name** | `stacksfit-v2` |
-| **Contract Address** | `STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E` |
-| **Full Contract ID** | `STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E.stacksfit-v2` |
-| **Explorer Link** | [View on Stacks Explorer](https://explorer.hiro.so/txid/STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E.stacksfit-v2?chain=testnet) |
-| **Network** | Testnet |
-| **Version** | 2.0.0 |
-| **Status** | ✅ **DEPLOYED & ACTIVE** |
 
 
 ```
