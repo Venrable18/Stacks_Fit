@@ -23,6 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
   min-height: 100vh;
+  min-width: 100vw;
   color: white;
   transition: background 0.3s ease, color 0.3s ease;
 }
