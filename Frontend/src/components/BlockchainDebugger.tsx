@@ -24,7 +24,6 @@ export const BlockchainDebugger: React.FC = () => {
   
   const [selectedFunction, setSelectedFunction] = useState('get-dashboard-data-v2');
   const [inputAddress, setInputAddress] = useState('');
-  const [inputDate, setInputDate] = useState('');
   const [queryResults, setQueryResults] = useState<QueryResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 

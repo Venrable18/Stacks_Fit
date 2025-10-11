@@ -9,9 +9,19 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          stacks: ['@stacks/connect', '@stacks/transactions', '@stacks/network'],
+          ui: ['framer-motion', 'recharts', '@react-three/fiber', '@react-three/drei']
+        }
+      }
+    }
   },
   define: {
     global: 'globalThis',
-  }
+  },
+  base: '/'
 })

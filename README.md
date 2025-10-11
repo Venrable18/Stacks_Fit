@@ -317,14 +317,16 @@ graph TD
 ### 📜 **Smart Contract Information**
 
 #### **StacksFit V2 Contract (Active)**
-```javascript
-Contract Address: STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E
-Contract Name: stacksfit-v2
-Full Contract ID: STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E.stacksfit-v2
-Network: Testnet
-Version: 2.0.0
-Status: ✅ DEPLOYED & ACTIVE
-```
+
+| Field | Value |
+|-------|-------|
+| **Contract Name** | `stacksfit-v2` |
+| **Contract Address** | `STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E` |
+| **Full Contract ID** | `STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E.stacksfit-v2` |
+| **Explorer Link** | [View on Stacks Explorer](https://explorer.hiro.so/txid/STP472NMPYXCMRB4G75EM43PESZT33FZG7GBVK8E.stacksfit-v2?chain=testnet) |
+| **Network** | Testnet |
+| **Version** | 2.0.0 |
+| **Status** | ✅ **DEPLOYED & ACTIVE** |
 
 
 ```
