@@ -1,0 +1,27 @@
+
+{
+  "name": "stacksfit-backend",
+  "version": "2.0.0",
+  "description": "StacksFit V2 Smart Contract - Advanced fitness tracking on Stacks blockchain",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "clarinet check",
+    "console": "clarinet console",
+    "deploy:testnet": "clarinet deployments apply --deployment testnet",
+    "deploy:devnet": "clarinet deployments apply --deployment devnet"
+  },
+  "author": "StacksFit Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Venrable18/Stacks_Fitness"
+  },
+  "keywords": [
+    "stacks",
+    "blockchain",
+    "fitness",
+    "smart-contract",
+    "clarity"
+  ]
+}

@@ -1,0 +1,55 @@
+nohup: ignoring input
+✅ Gemini AI service initialized successfully
+✅ OpenAI client initialized
+🚀 StacksFit AI Middleware running on port 3002
+📊 Environment: development
+🔗 CORS enabled for: localhost
+2025-10-05T23:31:49.376Z - GET /api/ai/smart/health
+2025-10-05T23:32:05.888Z - POST /api/ai/smart/workout-plan
+2025-10-05T23:32:21.356Z - POST /api/ai/smart/workout-plan
+🚀 Smart workout plan generation started...
+🎯 Starting workout plan generation with fallback system...
+🤖 Attempting OpenAI workout plan generation...
+❌ OpenAI failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+🔄 Falling back to Gemini...
+🧠 Attempting Gemini workout plan generation...
+Gemini API error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContent (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/node_modules/@google/generative-ai/dist/index.mjs:865:22)
+    at async GeminiAIService.generateWorkoutPlan (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/src/services/geminiService.js:105:22)
+    at async SmartAIService.generateWorkoutPlan (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/src/services/smartAIService.js:273:24)
+    at async file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/src/routes/ai.js:673:20 {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+❌ Gemini also failed: Gemini API error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+🔄 Using dummy data as final fallback...
+📝 Using dummy workout plan as final fallback
+2025-10-05T23:33:04.805Z - GET /api/ai/smart/health
+2025-10-05T23:33:04.822Z - POST /api/ai/smart/workout-plan
+🚀 Smart workout plan generation started...
+🎯 Starting workout plan generation with fallback system...
+🤖 Attempting OpenAI workout plan generation...
+❌ OpenAI failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+🔄 Falling back to Gemini...
+🧠 Attempting Gemini workout plan generation...
+Gemini API error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContent (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/node_modules/@google/generative-ai/dist/index.mjs:865:22)
+    at async GeminiAIService.generateWorkoutPlan (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/src/services/geminiService.js:105:22)
+    at async SmartAIService.generateWorkoutPlan (file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/src/services/smartAIService.js:273:24)
+    at async file:///home/tony/Desktop/Dev/Stacks_Fitness/ai_middleware/src/routes/ai.js:673:20 {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+❌ Gemini also failed: Gemini API error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+🔄 Using dummy data as final fallback...
+📝 Using dummy workout plan as final fallback
+2025-10-05T23:33:09.188Z - POST /api/ai/smart/nutrition-plan
+2025-10-05T23:37:07.709Z - GET /api/ai/smart/health
