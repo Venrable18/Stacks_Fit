@@ -23,12 +23,12 @@ const Navigation: React.FC = () => {
 
   const navItems = [
     { icon: Home, label: 'Dashboard', id: 'overview' },
-    { icon: Activity, label: 'Progress', id: 'progress' },
+    { icon: Activity, label: 'Progress', id: 'record' },
     { icon: Trophy, label: 'Achievements', id: 'achievements' },
-    { icon: Brain, label: 'AI Coach', id: 'ai-coach' },
+    { icon: Brain, label: 'AI Coach', id: 'ai' },
     { icon: Award, label: 'NFT Collection', id: 'nft' },
     { icon: Users, label: 'Social', id: 'social' },
-    { icon: Search, label: 'Blockchain Records', id: 'blockchain' },
+    { icon: Search, label: 'Blockchain Records', id: 'analytics' },
     { icon: Bug, label: 'Blockchain Debugger', id: 'debugger' },
   ];
 

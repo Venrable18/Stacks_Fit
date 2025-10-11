@@ -1,1 +1,47 @@
-node_modules
+# Dependenciesnode_modules
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+
+# Logs
+logs/
+*.log
+server.log
+
+# Cache directories
+.cache/
+.npm/
+
+# Coverage reports
+coverage/
+*.lcov
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Temporary files
+.tmp/
+temp/
+
+# Build outputs
+dist/
+build/

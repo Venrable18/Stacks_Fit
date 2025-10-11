@@ -5,6 +5,7 @@ import { useStacksStore } from '../store/stacksStore';
 import { useNavigationStore } from '../store/navigationStore';
 import { BlockchainDebugger } from './BlockchainDebugger';
 import LightModeToggle from './LightModeToggle';
+import AICoach from './AICoach';
 
 const Dashboard: React.FC = () => {
   const { activeSection } = useNavigationStore();
@@ -68,6 +69,103 @@ const Dashboard: React.FC = () => {
     switch (activeTab) {
       case 'debugger':
         return <BlockchainDebugger />;
+      case 'ai':
+        return (
+          <div className="h-full">
+            <AICoach />
+          </div>
+        );
+      case 'achievements':
+        return (
+          <div className="space-y-6">
+            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-md">
+              <h3 className="text-white font-semibold mb-4 text-2xl">🏆 Your Achievements ({achievements.length})</h3>
+              {achievements.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {achievements.map((achievement) => (
+                    <motion.div
+                      key={achievement.id}
+                      whileHover={{ scale: 1.05 }}
+                      className="flex items-center gap-3 p-4 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg border border-yellow-500/30"
+                    >
+                      <span className="text-3xl">{achievement.icon}</span>
+                      <div>
+                        <h4 className="text-white font-medium">{achievement.title}</h4>
+                        <p className="text-gray-300 text-sm">{achievement.description}</p>
+                        <p className="text-yellow-400 text-xs mt-1">Earned: {achievement.earnedDate}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <div className="text-6xl mb-4">🎯</div>
+                  <p className="text-gray-400 text-lg">No achievements yet</p>
+                  <p className="text-gray-500">Complete workouts and challenges to earn rewards!</p>
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      case 'analytics':
+        return (
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white/10 p-6 rounded-xl backdrop-blur-md">
+                <h3 className="text-white font-semibold mb-4 text-xl">📊 Weekly Analytics</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-gray-300">Average Daily Steps</p>
+                    <p className="text-2xl font-bold text-blue-400">{weeklyAverage.steps.toLocaleString()}</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-300">Average Calories</p>
+                    <p className="text-2xl font-bold text-orange-400">{weeklyAverage.calories}</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-300">Average Active Time</p>
+                    <p className="text-2xl font-bold text-green-400">{weeklyAverage.activeTime}min</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/10 p-6 rounded-xl backdrop-blur-md">
+                <h3 className="text-white font-semibold mb-4 text-xl">📈 Progress Trends</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">This Week</span>
+                    <span className="text-green-400">+15% ↗</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Last Month</span>
+                    <span className="text-green-400">+32% ↗</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Consistency</span>
+                    <span className="text-blue-400">85%</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Goal Progress</span>
+                    <span className="text-purple-400">68%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      case 'social':
+        return (
+          <div className="space-y-6">
+            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-md">
+              <h3 className="text-white font-semibold mb-4 text-2xl">👥 Social Features</h3>
+              <div className="text-center py-12">
+                <div className="text-6xl mb-4">🚀</div>
+                <p className="text-gray-300 text-lg mb-2">Social features coming soon!</p>
+                <p className="text-gray-500">Connect with friends, join challenges, and share your progress.</p>
+              </div>
+            </div>
+          </div>
+        );
+      case 'overview':
       default:
         return (
           <div className="space-y-6">
@@ -187,7 +285,13 @@ const Dashboard: React.FC = () => {
             return (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => {
+                  setActiveTab(tab.id);
+                  // Update navigation store if needed
+                  if (tab.id === 'ai') {
+                    console.log('🤖 Switching to AI Coach - Interactive mode enabled');
+                  }
+                }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                   activeTab === tab.id
                     ? 'bg-purple-600 text-white shadow-lg'

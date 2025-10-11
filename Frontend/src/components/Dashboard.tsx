@@ -12,9 +12,10 @@ import WorkoutPlanCreationForm from './WorkoutPlanCreationForm';
 import FriendsManagementForm from './FriendsManagementForm';
 import SampleDataGenerator from './SampleDataGenerator';
 import NFTCollection from './NFTCollection';
+import AICoach from './AICoach';
 
 const Dashboard: React.FC = () => {
-  const { activeSection } = useNavigationStore();
+  const { activeSection, setActiveSection } = useNavigationStore();
   const [activeTab, setActiveTab] = useState(activeSection);
   
   const { 
@@ -316,6 +317,13 @@ const Dashboard: React.FC = () => {
           </div>
         );
       
+      case 'ai':
+        return (
+          <div className="h-full">
+            <AICoach />
+          </div>
+        );
+      
       default:
         return (
           <div className="space-y-6">
@@ -606,7 +614,10 @@ const Dashboard: React.FC = () => {
             return (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => {
+                  setActiveTab(tab.id);
+                  setActiveSection(tab.id);
+                }}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                   activeTab === tab.id
                     ? 'bg-purple-600 text-white shadow-lg'
