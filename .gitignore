@@ -4,7 +4,12 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
+
+# Root level build artifacts (keep for deployment)
+# package-lock.json
+# index.html
+# assets/
+# _redirects
 
 # Environment variables
 .env
