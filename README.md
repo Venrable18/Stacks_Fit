@@ -76,6 +76,9 @@
 
 ---
 
+Pitch_deck: https://docs.google.com/presentation/d/1rOzIVzR8Vg0PURKkKhCirAuJ6TqucHc2454lAyTNHtw/edit?slide=id.p2#slide=id.p2
+---
+
 ### 📜 **Smart Contract Information**
 
 #### **StacksFit V2 Contract (Active)**
