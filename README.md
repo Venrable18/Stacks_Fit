@@ -30,7 +30,7 @@
 
 - 🔗 **Decentralized Ownership** - You own your fitness data on the blockchain
 - 🛡️ **Verified Achievements** - Immutable proof of fitness milestones
-- 💰 **Real Value Rewards** - NFT achievements tradeable on marketplaces
+- 💰 **Real Value Rewards** - NFT achievements that compends value over time.
 - 🌐 **Interoperability** - Data accessible across any Web3 fitness platform
 - 📊 **Authentic Progress** - Blockchain-verified fitness tracking
 - 🔒 **Privacy First** - Complete control over your health data
