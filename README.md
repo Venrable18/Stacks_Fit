@@ -22,7 +22,7 @@
 - ❌ **Fake Progress Claims** - No way to verify authentic fitness achievements  
 - ❌ **Limited Motivation** - Basic badges and points that hold no real value
 - ❌ **Data Silos** - Progress locked within specific platforms
-- ❌ **No Real Rewards** - Virtual achievements with no monetary or social value
+- ❌ **No Real Rewards** - Virtual achievements with no monetary or social value or could be valuable over the course of time
 - ❌ **Privacy Concerns** - Personal health data sold to third parties
 - ❌ **No Proof of Work** - Anyone can fake their fitness journey
 
